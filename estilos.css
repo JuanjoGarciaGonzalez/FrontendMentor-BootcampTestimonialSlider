@@ -1,0 +1,215 @@
+/* GENERALES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    background-image: url("images/pattern-curve.svg"), url("images/pattern-quotes.svg"), url("images/pattern-bg.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position-y: 510px, 150px, 75px;
+    background-position-x: 0, 230px, 700px;
+    background-size: auto, auto, 550px;
+}
+
+/* SLIDES */
+.slides {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+/* SLIDE */
+.slide {
+    width: 100%;
+    height: 100%;
+    /* flex-basis: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.slide__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.slide__content--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.content {
+    flex-basis: 70%;
+    z-index: 1;
+    color: #2a2744;
+}
+
+.testimonial {
+    opacity: .8;
+}
+
+.profile__name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.profile__profession {
+    opacity: .4;
+}
+
+.profile {
+    font-size: .5rem;
+    margin-top: 1rem;
+}
+
+.image {
+    flex-basis: 30%;
+    position: relative;
+}
+
+.image__img {
+    position: absolute;
+    left: -110px;
+    top: -200px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 25px 25px 40px -10px rgba(108,108,108,0.8);
+    -webkit-box-shadow: 25px 25px 40px -10px rgba(108,108,108,0.8);
+    -moz-box-shadow: 25px 25px 40px -10px rgba(108,108,108,0.8);
+}
+
+.buttons {
+    position: fixed;
+    right: 448px;
+    top: 506px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 1rem;
+    width: 2.5rem;
+    overflow: hidden;
+}
+
+button {
+    background: none;
+    border: 0;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit: none; /* for button */
+    -webkit-appearance: button; /* for input */
+    -moz: none;
+    -ms: none;
+    width: 50%;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.fas {
+    font-size: .8rem;
+    color: #2a2744;
+}
+
+button:hover {
+    background-color: yellow;
+    transition: background-color .2s ease-in-out;
+}
+
+button:not(:hover) {
+    background-color: rgb(255, 255, 255);
+    transition: background-color .2s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        background-position-y: 510px, 411px, 10px;
+        background-position-x: 0, 215px, 54px;
+        background-size: auto, 77px, 400px;
+    }
+
+    .slides {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide__content {
+        width: 100%;
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content {
+        flex-basis: 60%;
+        padding: 0 2rem;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .image {
+        flex-basis: 70%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .image__img {
+        width: 60%;
+        height: auto;
+        position: static;
+    }
+
+    .buttons {
+        right: 0;
+        left: 0;
+        top: 327px;
+        margin: auto;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile__name {
+        margin-right: 0;
+    }
+    
+}

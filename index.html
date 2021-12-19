@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <!-- ESTILOS PROPIOS -->
+  <link rel="stylesheet" href="estilos.css">
+  <!-- CDN FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+  <!-- FUNCIONES PROPIAS -->
+  <script src="funciones.js" defer></script>
+</head>
+<body>
+  <!-- SLIDES -->
+  <article class="slides">
+    <div class="buttons">
+      <button type="button" class="button-prev"><i class="fas fa-chevron-left image__button"></i></button>
+      <button type="button" class="button-next"><i class="fas fa-chevron-right image__button"></i></button>
+    </div>
+    <!-- SLIDE -->
+    <section class="slide">
+
+      <div class="slide__content slide__content--show" data-id="1">
+        <div class="content">
+          <p class="testimonial">
+            “ I’ve been interested in coding for a while but never taken the jump, until now. 
+              I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+              excited about the future. ”
+          </p>
+    
+          <div class="profile">
+            <span class="profile__name">Tanya Sinclair</span>
+            <span class="profile__profession">UX Engineer</span>
+          </div>
+        </div>
+  
+        <div class="image">
+          <img src="images/image-tanya.jpg" alt="Tanya image" class="image__img">
+        </div>
+      </div>
+
+      
+
+    </section>
+
+    <!-- SLIDE -->
+    <section class="slide">
+      
+      <div class="slide__content" data-id="2">
+        <div class="content">
+          <p class="testimonial">
+            “ If you want to lay the best foundation possible I’d recommend taking this course. 
+            The depth the instructors go into is incredible. I now feel so confident about 
+            starting up as a professional developer. ”
+          </p>
+    
+          <div class="profile">
+            <span class="profile__name">John Tarkpor</span>
+            <span class="profile__profession">Junior Front-end Developer</span>
+          </div>
+        </div>
+
+        <div class="image">
+          <img src="images/image-john.jpg" alt="Tanya image" class="image__img">
+        </div>
+    </div>
+
+    </section>
+
+    <!-- SLIDE -->
+    <section class="slide">
+      
+      <div class="slide__content" data-id="3">
+        <div class="content">
+          <p class="testimonial">
+            “ This experience has been incredible, not only on a professional level, but also on a personal level. Highly recommended. ”
+          </p>
+    
+          <div class="profile">
+            <span class="profile__name">Veronica Thompson</span>
+            <span class="profile__profession">Back-end Developer</span>
+          </div>
+        </div>
+
+        <div class="image">
+          <img src="images/image-veronica.jpg" alt="Veronica image" class="image__img">
+        </div>
+    </div>
+
+    </section>
+
+  </article>
+
+</body>
+</html>
